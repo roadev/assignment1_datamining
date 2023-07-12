@@ -7,7 +7,7 @@ search_url = f"{base_url}/search?query=computer+science&searchType=publisherSear
 
 with open('tableB/tableB.csv', 'w', newline='', encoding='utf-8') as f:
     writer = csv.writer(f)
-    writer.writerow(['title', 'authors', 'url', 'date', 'abstract'])
+    writer.writerow(['title', 'authors', 'abstract', 'url', 'date'])
 
     for i in range(1, 101):
 
@@ -28,4 +28,4 @@ with open('tableB/tableB.csv', 'w', newline='', encoding='utf-8') as f:
             date = article.select_one('[data-test="published-on"] span').get_text(strip=True)
             abstract_paragraph = article.select_one('p')
             abstract = abstract_paragraph.get_text(strip=True) if abstract_paragraph else "Abstract not found"
-            writer.writerow([title, url, authors, date, pdf_link, abstract])
+            writer.writerow([title, authors, abstract, url, date])

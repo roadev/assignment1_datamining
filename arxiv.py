@@ -29,12 +29,12 @@ for start in range(0, 1000, 50):
 
         abstract = clean_text(result.find('span', {'class': 'abstract-full has-text-grey-dark mathjax'}).text.strip())
 
-        pub_url = "https://arxiv.org" + result.find('p', {'class': 'list-title is-inline-block'}).find('a')['href']
+        url = "https://arxiv.org" + result.find('p', {'class': 'list-title is-inline-block'}).find('a')['href']
 
-        submitted_date_dirty = result.find('p', {'class': 'is-size-7'}).text.split(';')[-1].strip()
-        submitted_date = submitted_date_dirty.replace('originally announced', '').rstrip('.').strip()
+        date_raw = result.find('p', {'class': 'is-size-7'}).text.split(';')[-1].strip()
+        date = date_raw.replace('originally announced', '').rstrip('.').strip()
         
-        data.append([title, authors, abstract, pub_url, submitted_date])
+        data.append([title, authors, abstract, url, date])
 
 with open('tableA/tableA.csv', 'w', newline='', encoding='utf-8') as f:
     writer = csv.writer(f)
