@@ -1,0 +1,26 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+}
+.footer {
+    margin-top: auto;
+}
+
+.home-main {
+    justify-content: center;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+}

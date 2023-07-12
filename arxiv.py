@@ -38,5 +38,6 @@ for start in range(0, 1000, 50):
 
 with open('tableA/tableA.csv', 'w', newline='', encoding='utf-8') as f:
     writer = csv.writer(f)
-    writer.writerow(['title', 'authors', 'abstract', 'url', 'date'])
-    writer.writerows(data)
+    writer.writerow(['ID', 'title', 'authors', 'abstract', 'url', 'date'])
+    for i, row in enumerate(data, start=1):
+        writer.writerow([i] + row)

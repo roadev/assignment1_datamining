@@ -3,28 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Data Viewer - Table A</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-        }
-        .footer {
-            margin-top: auto;
-        }
-    </style>
+    <title>📝 Assignment 1 - Table B</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
     <div class="container mt-4">
-        <h1>Table A</h1>
+        <h1>Table B - springeropen.com</h1>
 
-        <!-- The table that will display the CSV data -->
-        <table id="data-table" class="table table-striped">
-            <!-- Headers should match your CSV columns -->
+        <table id="table" class="table table-striped">
             <thead>
                 <tr>
+                    <th>ID</th>
                     <th>title</th>
                     <th>authors</th>
                     <th>abstract</th>
@@ -33,26 +23,25 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- The CSV data will be inserted here -->
             </tbody>
         </table>
-
-        <!-- CSV Download Link -->
-        <a href="tableA.csv" download class="btn btn-primary">Download CSV Data</a>
     </div>
 
-    <!-- Sticky Footer -->
-    <footer class="footer mt-auto py-3 bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-4">
-                    <!-- Contact info goes here -->
-                </div>
-            </div>
+    <section class="pagination mt-4">
+        <div id="pagination"></div>
+    </section>
+
+    <section class="mt-5 mb-5 text-center">
+        <a href="tableB.csv" download class="btn btn-success">Download tableB.csv</a>
+    </section>
+
+    <footer class="footer mt-auto py-3 bg-dark text-white"> 
+        <div class="container text-center">
+            <span>Juan David Roa Valencia | Software Engineer</span>
         </div>
     </footer>
 
-    <!-- Include the JavaScript file that will handle the CSV data -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
     <script src="index.js"></script>
 </body>
